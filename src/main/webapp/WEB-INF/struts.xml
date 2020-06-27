@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.multipart.maxSize" value="20971520"/>
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+    <package name="default" namespace="/" extends="struts-default">
+        <!-- class属性中不写action的路径，因为在spring已经配置过了，应该写spring中bean的id -->
+        <!-- 登陆注册  -->
+    <action name="hello">
+        <result>/hello.jsp</result>
+    </action>
+    </package>
+</struts>
